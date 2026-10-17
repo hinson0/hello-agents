@@ -7,7 +7,9 @@ authors = [
     { name = "yangzhibing", email = "yangzhibing@300.cn" }
 ]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "numpy>=2.5.4",
+]
 
 [project.scripts]
 hello-agents = "hello_agents:main"
@@ -15,3 +17,6 @@ hello-agents = "hello_agents:main"
 [build-system]
 requires = ["uv_build>=0.12.19,<0.13.0"]
 build-backend = "uv_build"
+
+[tool.ruff.lint]
+unfixable = ['F401']
